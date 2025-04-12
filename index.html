@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Recipe Book</title>
+  <style>
+    /* Importing warm font */
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #1e1a1a;
+      color: #f5f0e6;
+    }
+
+    nav {
+      background-color: #3b2f2f;
+      padding: 12px 0;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #f0d9b5;
+      font-weight: 600;
+      font-size: 18px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #f5deb3;
+      color: #3b2f2f;
+      transform: scale(1.08);
+    }
+
+    header {
+      background-color: #2e2424;
+      padding: 30px;
+      text-align: center;
+      border-bottom: 2px solid #ffb347;
+      animation: welcomeMove 5s infinite alternate;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #ffa94d;
+    }
+
+    section {
+      max-width: 750px;
+      margin: 30px auto;
+      background-color: #2d2424;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 165, 0, 0.2);
+    }
+
+    section h2 {
+      color: #ffcc70;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ffb347;
+      padding: 10px;
+      background-color: #3b2f2f;
+      color: #fcecd1;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 174, 0, 0.4);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-style: italic;
+      color: #ffcc70;
+      font-weight: bold;
+      background-color: #2e2424;
+      border-top: 2px solid #ffb347;
+    }
+
+    /* Animation for welcome section */
+    @keyframes welcomeMove {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    /* Style for Add Recipe page */
+    .form-container {
+      max-width: 750px;
+      margin: 30px auto;
+      background-color: #2d2424;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255, 165, 0, 0.2);
+    }
+
+    .form-container input, .form-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ffb347;
+      background-color: #3b2f2f;
+      color: #f5f0e6;
+    }
+
+    .form-container button {
+      padding: 12px 24px;
+      background-color: #ffb347;
+      color: #3b2f2f;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-container button:hover {
+      background-color: #ffa94d;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="add_recipe.html">Add Recipe</a></li>
+      <li><a href="recipe_list.html">Recipe List</a></li>
+    </ul>
+  </nav>
+
+  <!-- Welcome Section -->
+  <header>
+    <h1>Welcome to My Recipe Book</h1>
+    <p>Discover warm, delicious Afghan flavors!</p>
+  </header>
+
+  <!-- Recipe of the Day -->
+  <section id="recipe-of-the-day">
+    <h2>Recipe of the Day: Mantu (Afghan Dumplings)</h2>
+    <img src="ABC.jpg" alt="Mantu - Afghan Dumplings" style="width:400px;height:auto;">
+    <table>
+      <tr><th>Ingredients</th></tr>
+      <tr><td>Ground meat (beef or lamb)</td></tr>
+      <tr><td>Onions</td></tr>
+      <tr><td>Dough</td></tr>
+      <tr><td>Garlic</td></tr>
+      <tr><td>Spices (salt, pepper, cumin)</td></tr>
+      <tr><td>Yogurt (for serving)</td></tr>
+    </table>
+    <h3>Instructions:</h3>
+    <ul>
+      <li>Prepare the dough and let it rest.</li>
+      <li>Mix ground meat with chopped onions, garlic, and spices.</li>
+      <li>Stuff the dough with the meat mixture and shape into dumplings.</li>
+      <li>Steam the dumplings for about 40 minutes.</li>
+      <li>Serve with yogurt on the side.</li>
+    </ul>
+  </section>
+
+  <!-- Recipe List -->
+  <section id="recipe-list">
+    <h2>Other Afghan Recipes:</h2>
+    <ul>
+      <li><a href="#">Kebab (Grilled Meat)</a></li>
+      <li><a href="#">Palaw (Afghan Pilaf)</a></li>
+      <li><a href="#">Ashak (Afghan Dumplings)</a></li>
+      <li><a href="#">Qabili Pulao (Rice with Lamb and Carrots)</a></li>
+    </ul>
+  </section>
+
+  <!-- Add Recipe Form -->
+  <section id="add-recipe">
+    <div class="form-container">
+      <h2>Submit a Recipe</h2>
+      <form>
+        <input type="text" placeholder="Recipe Name" required><br>
+        <textarea placeholder="Ingredients" rows="5" required></textarea><br>
+        <textarea placeholder="Instructions" rows="5" required></textarea><br>
+        <button type="submit">Submit Recipe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="footer">
+    Created by Shokriya Raoufi
+  </div>
+
+</body>
+</html>
